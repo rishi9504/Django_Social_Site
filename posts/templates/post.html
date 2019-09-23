@@ -1,0 +1,13 @@
+<!-- templates/post.html -->
+
+{% extends "base.html" %}
+
+{%block page_content%}
+<h3>Enter your Post details and upload the image</h3>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit New Post</button>
+</form>
+
+{%endblock%}

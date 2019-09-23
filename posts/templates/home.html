@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+
+{% extends "base.html" %}
+
+{%block page_content%}
+<h2>Images uploaded by the user</h2>
+</br>
+<ul>
+  {% for post in object_list %}
+    <!-- <h4>Caption:</h4> -->
+    <p>{{ post.title }}</p>
+    
+    <img src="{{ post.cover.url}}" width = "600" height = "150" alt="{{ post.title }}"></br>
+</br>
+  {% endfor %}
+</ul>
+
+{%endblock%}
